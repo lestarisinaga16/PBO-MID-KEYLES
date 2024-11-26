@@ -231,6 +231,10 @@ public class FlightTravelAgent {
                     removeRute(Integer.parseInt(routeNumToRemove));
                     break;
                 case "7":
+                    showPassengerInfo();
+                    String infoNumToEdit = input("Pilih nomor data yang akan diedit (x utk batal)");
+                    if (infoNumToEdit.equalsIgnoreCase("x")) break; // Pembatalan
+                    editPassengerInfo(Integer.parseInt(infoNumToEdit));
                     break;
 
                 case "8":
